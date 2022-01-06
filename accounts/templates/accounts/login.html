@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <title>Log In</title>
+</head>
+<body >
+ 
+    <div class="register">
+        <div class="container">
+            <div class="register-content">                 
+                    <h2 class="form-title">Log In</h2>
+                    <form method="POST" action="">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <label for="name" class="font">Username</label>
+                            <input type="text" class="" name="username" >
+                        </div>
+                        <div class="form-group">
+                            <label for="name" class="font">Password</label>
+                            <input type="password" class="" name="password" >
+                        </div>
+                        <div class="form-group">
+                            <input class="btn" type="submit" value="submit">
+                        </div>
+                    </form>
+                    <div >
+                        {% for message in messages %}
+                            <p class="font">{{message}}</p>
+                        {% endfor %} 
+                    </div>   
+                    <div>
+                        <p class="font">Don't have a Account?<a href="/register">Sign Up</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>  
+    </div>
+</body>
+</html>                      

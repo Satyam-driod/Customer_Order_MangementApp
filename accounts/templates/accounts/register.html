@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <title>Registration</title>
+</head>
+<body >
+ 
+    <div class="container">
+        <div class="register">
+            <div class="register-content">                 
+                    <h2 class="form-title">Registration</h2>
+                    <form method="POST" action="">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <label for="name" class="font">Username</label>
+                            {{form.username}}
+                        </div>
+                        <div class="form-group">
+                            <label for="name" class="font">Email</label>
+                            {{form.email}}
+                        </div>
+                        <div class="form-group">
+                            <label for="name" class="font">Password</label>
+                            {{form.password1}}
+                        </div>
+                        <div class="form-group">
+                            <label for="name" class="font">Re-Enter Password</label>
+                            {{form.password2}}
+                        </div>
+                        <div class="form-group">
+                            <button class="btn" type="submit" value="submit">Submit</button>
+                        </div>
+                    </form>
+                    <div>
+                        {{form.errors}}
+                    </div>    
+                    <div \>
+                        <p class="font">Already have a Account?<a href="/login">Log In</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>  
+    </div>
+</body>
+</html>                      
